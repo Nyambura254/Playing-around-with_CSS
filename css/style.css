@@ -1,0 +1,223 @@
+/*    ("*" this remove everything in the body section to 0 padding/marging)
+*{
+	margin:0;
+	padding:0;
+}
+*/
+body{
+	background-color: #f4f4f4;/* this changes the whole background color to whichever color of your choice*/
+	color: #555555;/* the color of the content in the body like lorem paragraph*/
+	font-family: Arial, Helvitica, sans-serif;
+	font-size: 16px;/*this the words size(fonts)*/
+	font-weight: normal;/*this is changing the boldness of the words e.g from normal to bold*/
+
+	line-height: 1.6rem;
+	margin: 0;/*to remove all margin around but header has margin by default*/
+}
+/*you can avoid repeating all fonts by just using one font to represent all the fonts above
+......
+font:normal 16px Arial, Helvetica, sans-serif;
+...... if you delete the other fonts and you uncomment the one font,the page don't change after you reload your browser*/
+
+
+
+/*applying global style to the links in the page*/
+a{
+	text-decoration:none;
+	color: #000; 
+}
+/*hover states*/
+a:hover{
+	color: green;
+}
+/*active states helps when you hover it responds very quick*/
+a:active{
+	color: cyan;
+}
+a:visited{
+	color: white;
+}
+
+.container{
+	width: 80%;/*box size.we use % instead of px to make it responsive   */
+	margin: auto;/*automatically push the box in the center of the body*/
+}
+.button{
+	background-color: #333;
+	color: #fff;
+	padding: 10px 15px;
+	border:none;  
+}
+.button:hover{
+	background: red;
+	color: #fff;
+
+}
+.clr{
+	clear: both;
+}
+.box-1{
+	background-color: #333;
+	color: white;/*text color in the box OR (#fff)*/
+
+	border-right: 5px red solid;/* box border color*/
+	border-left: 5px red solid;
+	border-top: 5px red solid;
+	border-bottom: 5px red solid;
+
+	/*you can avoid repetition by replacing with 
+
+	border:5px red solid;(same as above)*/
+	border-width: 3px;/*width*/
+	border-bottom-width: 10px;
+	border-top-style: dotted;/*dotted line top border*/
+
+	border:5px red solid;
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-right:20px;
+	padding-left:20px;
+
+	/*same as above 
+	padding:20px:*/
+	margin-top: 20px;/*to separate upper border content and bottom content */
+	 /*(or) margin:20px 0; for both sides*/
+}
+.box-1 h1{
+	font-weight: 800;
+	font-family: Tohama;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+}
+.box-2{
+	border:3px dotted#ccc;
+	padding:20px;
+	margin: 20px 0; 
+}
+/*categories section*/
+.categories{
+	border:1px #ccc solid;
+	padding: 10px;/*all round*/
+	border-radius: 15px;
+
+}
+.categories h2{
+	text-align: center;
+}
+.categories ul{
+	padding: 0;
+	padding-left: 20px;
+	list-style: square;
+	list-style: none;
+}
+.categories li{
+	padding-bottom: 8px;
+	border-bottom:dotted 1px #333;
+	list-style-image: url('../images/');
+}
+.my-form{
+	padding: 20px;
+}
+.my-form .form-group{
+	padding-bottom: 15px;/*to separate inputs fields*/
+
+}
+.my-form label{
+	display: block;
+}
+.my-form input[type="text"], .my-form textarea{/*message should be text and we have same sytles*/
+	padding: 8px;
+	width: 100%;
+}
+/*submit button sytles but since we have class button, we define the class button under container----
+*/
+
+.my-form input[type="submit"]{
+	background-color: #333;
+	color: #fff;
+	padding: 10px 15px;
+	border:none;
+
+	
+
+}
+.block{
+	float: left;
+	width: 33.3%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	box-sizing: border-box;
+}
+/*id we use (#) side unlike class where we use (.)
+
+main-block should float left while sidebar should float right*/
+#main-block{
+	float: left; 
+	width: 70%; /*we give spaces btn the main-block and sidebar*/
+	padding: 15px;
+	box-sizing: border-box;
+}
+#sidebar{
+	float: right;
+	width: 30%;
+	background-color: #333;
+	color: #fff;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+/***********css potitioning *****/
+
+
+.p-box{
+	width: 800px;/*box side */
+	height: 400px;
+	border:1px solid #000;
+	margin-top: 30px;
+	background-image: url('../images/p.jpg');
+	background-repeat: no-repeat;/*to avoid picture repeating itself*/
+	background-position: 100px 200px;
+	background-position: center ;/*positioning pic in the center*/
+
+	position: relative;/*normal position before we change the content of the h1 to absolute*/
+}
+
+/**absolute positioning**/
+.p-box h1{
+	position: absolute;
+	top:40px;
+
+	left: 200px;
+}
+.p-box h2{
+	position: absolute;
+	bottom: 40px;
+	right: 100px;
+
+}
+/** fixed positioning.....
+
+when you scroll either up or down,, the button is still fixed... not moving*/
+.fix-me{
+	position: fixed;
+	top:400px;
+}
+
+
+
+/*******pseudo classes section****/
+.my-list li:first-child{
+	background: red;
+
+}
+.my-list li:last-child{
+	background: blue;
+	
+}
+/*when you want to target list number 5th or even list be of certain color*/
+.my-list li:nth-child(even){
+	background: cyan;
+}
+
